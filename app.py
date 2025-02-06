@@ -5,14 +5,14 @@ import gdown
 import os
 from PIL import Image
 
-url = "https://drive.google.com/file/d/1j14OAUMlP5Z0hz7pwsLBEvGjvAaTfdQQ/view?usp=sharing"
+url = "https://drive.google.com/file/d/1j14OAUMlP5Z0hz7pwsLBEvGjvAaTfdQQ/view?usp=drive_link"
 file_id = "1j14OAUMlP5Z0hz7pwsLBEvGjvAaTfdQQ"
 
 model_path = "trained_plant_disease_model.keras"
 
 if not os.path.exists(model_path):
     st.warning("Downloading model from Google Drive...")
-    gdown.download(url, model_path,quiet=False)
+    gdown.download(url, model_path, fuzzy=True)
 
 def model_prediction(test_image):
     model = tf.keras.models.load_model(model_path)
