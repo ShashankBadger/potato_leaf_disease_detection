@@ -5,7 +5,7 @@ import gdown
 import os
 from PIL import Image
 
-url = "https://drive.google.com/file/d/"
+url = "https://drive.google.com/file/d/1j14OAUMlP5Z0hz7pwsLBEvGjvAaTfdQQ/view?usp=sharing"
 file_id = "1j14OAUMlP5Z0hz7pwsLBEvGjvAaTfdQQ"
 
 model_path = "trained_plant_disease_model.keras"
